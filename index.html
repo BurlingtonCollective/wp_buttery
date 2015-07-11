@@ -27,7 +27,7 @@ projects: [
     </div>
     <div class="row">
       {% for project in page.projects %}
-        {% if article == 'reg' %}
+        {% if project == 'reg' %}
           {% include project/preview.html %}
         {% else %}
           {% include project/preview-wide.html %}
