@@ -1,4 +1,6 @@
-@import '../node_modules/bootstrap/less/bootstrap';
+@vendor-path: '../node_modules';
+@import '@{vendor-path}/bootstrap/less/bootstrap';
+@icon-font-path: "@{vendor-path}/bootstrap/fonts/";
 
 @black: #383838;
 @white: #ffffff;
@@ -21,4 +23,6 @@ nav#top-nav {
   }
 }
 
-@import 'components/article';
+@import 'component/article';
+
+@import 'layout/work';
