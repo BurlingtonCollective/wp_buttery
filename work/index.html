@@ -1,6 +1,6 @@
 ---
 layout: default
-articles: [
+projects: [
   'reg',
   'reg',
   'reg',
@@ -24,11 +24,11 @@ articles: [
       </div>
     </div>
     <div class="row">
-      {% for article in page.articles %}
-        {% if article == 'reg' %}
-          {% include article-preview.html %}
+      {% for project in page.projects %}
+        {% if project == 'reg' %}
+          {% include project/preview.html %}
         {% else %}
-          {% include article-preview-wide.html %}
+          {% include project/preview-wide.html %}
         {% endif %}
       {% endfor %}
     </div>
