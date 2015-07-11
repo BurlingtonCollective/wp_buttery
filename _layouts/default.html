@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Buttery Agency</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/master.css">
+</head>
+<body class="preload">
+  <nav id="top-nav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-nav .collapse" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Buttery Agency</a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="collapse navbar-collapse">
+            <ul id="primary-nav" class="nav navbar-nav">
+              <li><a href="#">Work</a></li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Journal</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <ul id="social-nav" class="nav navbar-nav">
+              <li><a href="#">F</a></li>
+              <li><a href="#">T</a></li>
+              <li><a href="#">t</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  {{ content }}
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-6">
+          <hr>
+          <p>&copy; 2015 BUTTERY AGENCY, LLC. <small>All rights reserved.</small></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="{{ site.baseurl }}/node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      $('body').removeClass('preload');
+    });
+  </script>
+</body>
+</html>

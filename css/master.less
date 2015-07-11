@@ -1,1 +1,24 @@
 @import '../node_modules/bootstrap/less/bootstrap';
+
+@black: #383838;
+@white: #ffffff;
+
+@nav-link-padding-vert: 10px;
+@nav-link-padding-horz: 15px;
+@nav-link-padding: @nav-link-padding-vert @nav-link-padding-horz;
+
+body {
+  padding-top: 70px;
+
+  &.preload * {
+    .transition(~"none !important");
+  }
+}
+
+nav#top-nav {
+  #primary-nav {
+    margin-left: -@nav-link-padding-horz;
+  }
+}
+
+@import 'components/article';

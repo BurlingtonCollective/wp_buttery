@@ -1,0 +1,36 @@
+---
+layout: default
+articles: [
+  'reg',
+  'reg',
+  'reg',
+  'reg',
+
+  'reg',
+  'reg',
+  'wide',
+
+  'reg',
+  'reg',
+  'reg',
+  'reg'
+]
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-6">
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate cumque in commodi necessitatibus optio ipsam, officia laudantium quis sint architecto nam minus, cum possimus nostrum ducimus vitae laborum beatae nihil!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat repellat, dolor autem accusantium. Libero molestias alias architecto assumenda consectetur praesentium quam minima eum dolor, accusamus iure, quisquam delectus odit repellat.</p>
+    </div>
+  </div>
+  <div class="row">
+    {% for article in page.articles %}
+      {% if article == 'reg' %}
+        {% include article-preview.html %}
+      {% else %}
+        {% include article-preview-wide.html %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

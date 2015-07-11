@@ -1,0 +1,29 @@
+article {
+  &.preview {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 371px;
+    margin-bottom: @grid-gutter-width;
+
+    .inner {
+      @margin: 6px;
+      .transition(all .3s ease-in-out);
+      .opacity(0);
+      position: absolute;
+      top: @margin;
+      right: @margin;
+      bottom: @margin;
+      left: @margin;
+      border: 6px solid transparent;
+      background: @white;
+    }
+
+    &:hover {
+      .inner {
+        .opacity(1);
+      }
+    }
+  }
+}
