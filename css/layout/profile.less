@@ -1,0 +1,18 @@
+section#profile {
+  #staff p, #client-history ul, #awards ul {
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+      @col-width: (@container-sm / 3) - (@grid-gutter-width * 3);
+      .columns(@col-width, 3, @grid-gutter-width, transparent, none, 0px);
+    }
+
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+      @col-width: (@container-md / 3) - (@grid-gutter-width * 3);
+      .columns(@col-width, 3, @grid-gutter-width, transparent, none, 0px);
+    }
+
+    @media (min-width: @screen-lg-min) {
+      @col-width: (@container-lg / 3) - (@grid-gutter-width * 3);
+      .columns(@col-width, 3, @grid-gutter-width, transparent, none, 0px);
+    }
+  }
+}
