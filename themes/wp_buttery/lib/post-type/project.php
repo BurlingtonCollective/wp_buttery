@@ -22,7 +22,7 @@ function create_project_post_type() {
         'description'   => 'Holds our project specific data',
         'public'        => true,
         'menu_position' => 5,
-        'supports'      => array('title', 'thumbnail', 'page-attributes'),
+        'supports'      => array('title', 'editor', 'thumbnail'),
         'has_archive'   => true,
         'show_ui' => true,
         'capability_type' => 'post',

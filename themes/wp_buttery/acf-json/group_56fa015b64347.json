@@ -1,0 +1,259 @@
+{
+    "key": "group_56fa015b64347",
+    "title": "Project Fields",
+    "fields": [
+        {
+            "key": "field_56fa063ccaeeb",
+            "label": "Subheading",
+            "name": "subheading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_56fa0191dcd9e",
+            "label": "Excerpt",
+            "name": "excerpt",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "wpautop",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_56fa0257dcd9f",
+            "label": "Feature this project?",
+            "name": "featured",
+            "type": "true_false",
+            "instructions": "When a project is featured, it is added to the homepage.  The homepage lists featured projects by created date.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<span style=\"color:red;\">FEATURED<\/span>",
+            "default_value": 0
+        },
+        {
+            "key": "field_56fa0424501c4",
+            "label": "Content",
+            "name": "content",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": "",
+            "max": "",
+            "layout": "row",
+            "button_label": "Add Content Row",
+            "sub_fields": [
+                {
+                    "key": "field_56fa0458501c5",
+                    "label": "Content Row",
+                    "name": "content_row",
+                    "type": "flexible_content",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "button_label": "Add Content Block",
+                    "min": "",
+                    "max": "",
+                    "layouts": [
+                        {
+                            "key": "56fa04678eebb",
+                            "name": "photo_block",
+                            "label": "Photo Block",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_56fa06ad7685a",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_56fa06d87685b",
+                                    "label": "Width",
+                                    "name": "width",
+                                    "type": "select",
+                                    "instructions": "* Advanced - you'll need to make sure this jives with other block widths in this content row.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "auto": "auto (splits evenly between content blocks in row)",
+                                        "25%": "25%",
+                                        "33.3%": "33.3%",
+                                        "50%": "50%",
+                                        "66.6%": "66.6%",
+                                        "75%": "75%",
+                                        "100%": "100%"
+                                    },
+                                    "default_value": [
+                                        "auto"
+                                    ],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "disabled": 0,
+                                    "readonly": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        {
+                            "key": "56fa087380d33",
+                            "name": "text_block",
+                            "label": "Text Block",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_56fa088b80d34",
+                                    "label": "Heading",
+                                    "name": "heading",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "Notes",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "readonly": 0,
+                                    "disabled": 0
+                                },
+                                {
+                                    "key": "field_56fa08bc80d35",
+                                    "label": "Subheading",
+                                    "name": "subheading",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "Description",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "readonly": 0,
+                                    "disabled": 0
+                                },
+                                {
+                                    "key": "field_56fa08d780d36",
+                                    "label": "Copy",
+                                    "name": "copy",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1459226970
+}
