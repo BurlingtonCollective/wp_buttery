@@ -1,0 +1,332 @@
+{
+    "key": "group_56fa0c5978aa5",
+    "title": "Profile Page Fields",
+    "fields": [
+        {
+            "key": "field_56fa0d3cea967",
+            "label": "Contacts",
+            "name": "contacts",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "button_label": "Add Contact",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "56fa0d46149c2",
+                    "name": "email_block",
+                    "label": "Email Block",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_56fa0d7aea968",
+                            "label": "Block Title",
+                            "name": "block_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "e.g \"General Inquires\" or \"Vermont\"",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56fa0e1fea969",
+                            "label": "Email",
+                            "name": "email",
+                            "type": "email",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "56fa0e3fea96a",
+                    "name": "phone_block",
+                    "label": "Phone Block",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_56fa0e4cea96b",
+                            "label": "Block Title",
+                            "name": "block_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "e.g \"General Inquires\" or \"Vermont\"",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56fa0e78ea96c",
+                            "label": "Phone Number",
+                            "name": "phone_number",
+                            "type": "number",
+                            "instructions": "Just numbers, no separators.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": 8023455087,
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        },
+        {
+            "key": "field_56fa0f31cb838",
+            "label": "Profiles",
+            "name": "profiles",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": "",
+            "max": "",
+            "layout": "block",
+            "button_label": "Add Profile",
+            "sub_fields": [
+                {
+                    "key": "field_56fa0f91cb839",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56fa0fe0cb83a",
+                    "label": "Position",
+                    "name": "position",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56fa0ff3cb83b",
+                    "label": "Biography",
+                    "name": "biography",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1
+                }
+            ]
+        },
+        {
+            "key": "field_56fa111b473b6",
+            "label": "Client Logos",
+            "name": "client_logos",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": "",
+            "max": "",
+            "layout": "block",
+            "button_label": "Add Client",
+            "sub_fields": [
+                {
+                    "key": "field_56fa1158473b7",
+                    "label": "Client Name",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56fa1516473b8",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "logo",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ]
+        },
+        {
+            "key": "field_56fa155b41045",
+            "label": "Honors",
+            "name": "honors",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": "",
+            "max": "",
+            "layout": "block",
+            "button_label": "Add Honor",
+            "sub_fields": [
+                {
+                    "key": "field_56fa158f41046",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "Title of award",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "profile.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1459230140
+}
