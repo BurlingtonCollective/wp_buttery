@@ -22,7 +22,7 @@ function create_profile_post_type() {
         'description'   => 'Holds our profile specific data',
         'public'        => true,
         'menu_position' => 5,
-        'supports'      => array('title', 'editor', 'thumbnail'),
+        'supports'      => array('title', 'editor'),
         'has_archive'   => true,
         'show_ui' => true,
         'capability_type' => 'post',

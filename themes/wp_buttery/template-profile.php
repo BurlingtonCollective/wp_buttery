@@ -2,35 +2,26 @@
 /*
  * Template Name: Profile Template
  */
-get_header(); ?>
+get_header();
+if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <section id="profile">
     <div class="container">
         <div class="row">
             <div class="col-xs-6">
-                <p class="lead">We will do a bit of biz schmergle, our bios, our clients, and then awards here on this page. Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros luptatum zzril delenit augue fuckshow.</p>
+                <?php the_content(); ?>
             </div>
         </div>
         <div id="staff" class="row">
-            <div class="col-xs-12">
-                <h1>Joe Polevy</h1>
-                <h2>Design Director</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus obcaecati necessitatibus aliquam, animi nemo, est dignissimos mollitia temporibus repudiandae aut ducimus? Possimus blanditiis ducimus ullam, eos similique, reiciendis explicabo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum nam at excepturi cumque, distinctio, possimus dolore, quas minus ad quasi, vero reiciendis minima accusantium eligendi cupiditate nesciunt atque beatae! Enim!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloribus eveniet eum non assumenda adipisci rem mollitia! Ad optio porro at, recusandae molestias vero fugiat consectetur facere dolor dolorem adipisci!</p>
-            </div>
-            <div class="col-xs-12">
-                <h1>Justin Cash</h1>
-                <h2>Photography Director</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus obcaecati necessitatibus aliquam, animi nemo, est dignissimos mollitia temporibus repudiandae aut ducimus? Possimus blanditiis ducimus ullam, eos similique, reiciendis explicabo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum nam at excepturi cumque, distinctio, possimus dolore, quas minus ad quasi, vero reiciendis minima accusantium eligendi cupiditate nesciunt atque beatae! Enim!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloribus eveniet eum non assumenda adipisci rem mollitia! Ad optio porro at, recusandae molestias vero fugiat consectetur facere dolor dolorem adipisci!</p>
-            </div>
-            <div class="col-xs-12">
-                <h1>Mike Horn</h1>
-                <h2>Editorial Director</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus obcaecati necessitatibus aliquam, animi nemo, est dignissimos mollitia temporibus repudiandae aut ducimus? Possimus blanditiis ducimus ullam, eos similique, reiciendis explicabo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum nam at excepturi cumque, distinctio, possimus dolore, quas minus ad quasi, vero reiciendis minima accusantium eligendi cupiditate nesciunt atque beatae! Enim!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloribus eveniet eum non assumenda adipisci rem mollitia! Ad optio porro at, recusandae molestias vero fugiat consectetur facere dolor dolorem adipisci!</p>
-            </div>
-            <div class="col-xs-12">
-                <h1>Galin Foley</h1>
-                <h2>Videography Director</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus obcaecati necessitatibus aliquam, animi nemo, est dignissimos mollitia temporibus repudiandae aut ducimus? Possimus blanditiis ducimus ullam, eos similique, reiciendis explicabo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum nam at excepturi cumque, distinctio, possimus dolore, quas minus ad quasi, vero reiciendis minima accusantium eligendi cupiditate nesciunt atque beatae! Enim!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloribus eveniet eum non assumenda adipisci rem mollitia! Ad optio porro at, recusandae molestias vero fugiat consectetur facere dolor dolorem adipisci!</p>
-            </div>
+            <?php
+            $profiles = get_posts(array('post_type' => 'profile'));
+            foreach ($profiles as $post) : setup_postdata($post); ?>
+                <div class="col-xs-12">
+                    <h1><?php the_title(); ?></h1>
+                    <h2><?php the_field('job_title'); ?></h2>
+                    <p><?php the_content(); ?></p>
+                </div>
+            <?php wp_reset_postdata();
+            endforeach; ?>
         </div>
         <div id="clients" class="row">
             <div class="col-xs-12">
@@ -114,4 +105,5 @@ get_header(); ?>
         </div>
     </div>
 </section>
-<?php get_footer();
+<?php endwhile; endif;
+get_footer();
