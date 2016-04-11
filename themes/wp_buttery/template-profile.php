@@ -2,7 +2,7 @@
 /*
  * Template Name: Profile Template
  */
-?>
+get_header(); ?>
 <section id="profile">
     <div class="container">
         <div class="row">
@@ -114,3 +114,4 @@
         </div>
     </div>
 </section>
+<?php get_footer();

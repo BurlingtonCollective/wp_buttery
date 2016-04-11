@@ -1,3 +1,4 @@
+<?php get_header(); ?>
 <section id="detail" class="journal">
     <div class="container">
         <div class="row">
@@ -55,3 +56,4 @@
         </article>
     </div>
 </section>
+<?php get_footer();

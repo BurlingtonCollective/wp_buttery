@@ -1,8 +1,8 @@
 <?php
 /*
- * Template Name: Home Template
+ * Template Name: Contact Template
  */
-?>
+get_header(); ?>
 <section id="contact">
     <div class="container">
         <div class="row">
@@ -78,3 +78,4 @@
         </div>
     </div>
 </section>
+<?php get_footer();
