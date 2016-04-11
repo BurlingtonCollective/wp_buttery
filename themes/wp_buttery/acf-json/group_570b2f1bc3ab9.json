@@ -1,0 +1,72 @@
+{
+    "key": "group_570b2f1bc3ab9",
+    "title": "Contact Page Fields",
+    "fields": [
+        {
+            "key": "field_570b2f3f91e63",
+            "label": "Quick Contact Blocks",
+            "name": "quick_contact_blocks",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "contact"
+            ],
+            "taxonomy": [
+
+            ],
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_570b304291e67",
+            "label": "Contact Detail Blocks",
+            "name": "contact_detail_blocks",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "contact"
+            ],
+            "taxonomy": [
+
+            ],
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-contact.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1460352103
+}
