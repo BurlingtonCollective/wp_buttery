@@ -1,1 +1,38 @@
-@import '../node_modules/bootstrap/less/bootstrap';
+/*!
+Theme Name: Buttery
+Author: Burlington Collective (Zachary Lincoln)
+Author URI: http://www.burlingtoncollective.com
+Template: twentysixteen
+ */
+
+@vendor-path: '../../../node_modules';
+@import '@{vendor-path}/bootstrap/less/bootstrap';
+@icon-font-path: "@{vendor-path}/bootstrap/fonts/";
+
+@black: #383838;
+@white: #ffffff;
+
+@nav-link-padding-vert: 10px;
+@nav-link-padding-horz: 15px;
+@nav-link-padding: @nav-link-padding-vert @nav-link-padding-horz;
+
+body {
+  padding-top: 70px;
+
+  &.preload * {
+    .transition(~"none !important");
+  }
+}
+
+nav#top-nav {
+  #primary-nav {
+    margin-left: -@nav-link-padding-horz;
+  }
+}
+
+@import 'mixins';
+
+@import 'component/article';
+
+@import 'layout/work';
+@import 'layout/profile';
