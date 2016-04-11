@@ -23,35 +23,20 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <?php wp_reset_postdata();
             endforeach; ?>
         </div>
-        <div id="clients" class="row">
-            <div class="col-xs-12">
-                <h1>Clients</h1>
+        <?php if (have_rows('client_logos')) : ?>
+            <div id="clients" class="row">
+                <div class="col-xs-12">
+                    <h1>Clients</h1>
+                </div>
+                <?php
+                while (have_rows('client_logos')) : the_row();
+                    $image = get_sub_field('image'); ?>
+                    <div class="col-xs-6 col-sm-4">
+                        <img class="img-responsive" src="<?php echo $image['url']; ?>">
+                    </div>
+                <?php endwhile; ?>
             </div>
-            <div class="col-xs-6 col-sm-4">
-                <img class="img-responsive" src="http://placehold.it/600x300">
-            </div>
-            <div class="col-xs-6 col-sm-4">
-                <img class="img-responsive" src="http://placehold.it/600x300">
-            </div>
-            <div class="col-xs-6 col-sm-4">
-                <img class="img-responsive" src="http://placehold.it/600x300">
-            </div>
-            <div class="col-xs-6 col-sm-4">
-                <img class="img-responsive" src="http://placehold.it/600x300">
-            </div>
-            <div class="col-xs-6 col-sm-4">
-                <img class="img-responsive" src="http://placehold.it/600x300">
-            </div>
-            <div class="col-xs-6 col-sm-4">
-                <img class="img-responsive" src="http://placehold.it/600x300">
-            </div>
-            <div class="col-xs-6 col-sm-4">
-                <img class="img-responsive" src="http://placehold.it/600x300">
-            </div>
-            <div class="col-xs-6 col-sm-4">
-                <img class="img-responsive" src="http://placehold.it/600x300">
-            </div>
-        </div>
+        <?php endif; ?>
         <div id="client-history" class="row">
             <div class="col-xs-12">
                 <div class="page-heading">
@@ -60,49 +45,31 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 </div>
             </div>
             <ul>
-                <li><a href="#">Gullwing Products</a></li>
-                <li><a href="#">Gullwing Products</a></li>
-                <li><a href="#">Gullwing Products</a></li>
-                <li><a href="#">Gullwing Products</a></li>
-                <li><a href="#">Gullwing Products</a></li>
-                <li><a href="#">Gullwing Products</a></li>
-                <li><a href="#">Gullwing Products</a></li>
-                <li><a href="#">Gullwing Products</a></li>
-                <li><a href="#">Gullwing Products</a></li>
-                <li><a href="#">Gullwing Products</a></li>
-                <li><a href="#">Gullwing Products</a></li>
-                <li><a href="#">Gullwing Products</a></li>
-                <li><a href="#">Gullwing Products</a></li>
-                <li><a href="#">Gullwing Products</a></li>
-                <li><a href="#">Gullwing Products</a></li>
-                <li><a href="#">Gullwing Products</a></li>
+                <?php
+                $projects = get_posts(array('post_type' => 'project'));
+                foreach ($projects as $post) : setup_postdata($post); ?>
+                    <li>
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    </li>
+                    <?php wp_reset_postdata();
+                endforeach; ?>
             </ul>
         </div>
-        <div id="awards" class="row">
-            <div class="col-xs-12">
-                <div class="page-heading">
-                    <h1>Honors &amp; Awards</h1>
+        <?php if (have_rows('client_logos')) : ?>
+            <div id="awards" class="row">
+                <div class="col-xs-12">
+                    <div class="page-heading">
+                        <h1>Honors &amp; Awards</h1>
+                    </div>
                 </div>
+                <ul>
+                    <?php
+                    while (have_rows('honors')) : the_row(); ?>
+                        <li><?php the_sub_field('title'); ?></li>
+                    <?php endwhile; ?>
+                </ul>
             </div>
-            <ul>
-                <li><a href="#">Leurzer's Archive + 2007</a></li>
-                <li><a href="#">Leurzer's Archive + 2007</a></li>
-                <li><a href="#">Leurzer's Archive + 2007</a></li>
-                <li><a href="#">Leurzer's Archive + 2007</a></li>
-                <li><a href="#">Leurzer's Archive + 2007</a></li>
-                <li><a href="#">Leurzer's Archive + 2007</a></li>
-                <li><a href="#">Leurzer's Archive + 2007</a></li>
-                <li><a href="#">Leurzer's Archive + 2007</a></li>
-                <li><a href="#">Leurzer's Archive + 2007</a></li>
-                <li><a href="#">Leurzer's Archive + 2007</a></li>
-                <li><a href="#">Leurzer's Archive + 2007</a></li>
-                <li><a href="#">Leurzer's Archive + 2007</a></li>
-                <li><a href="#">Leurzer's Archive + 2007</a></li>
-                <li><a href="#">Leurzer's Archive + 2007</a></li>
-                <li><a href="#">Leurzer's Archive + 2007</a></li>
-                <li><a href="#">Leurzer's Archive + 2007</a></li>
-            </ul>
-        </div>
+        <?php endif; ?>
     </div>
 </section>
 <?php endwhile; endif;
