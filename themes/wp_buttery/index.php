@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php
+get_header();
+if ( have_posts() ) : ?>
 <section id="overview" class="journal">
     <div class="container">
         <div class="row">
@@ -9,20 +11,22 @@
             </div>
         </div>
         <div class="row">
-            {% for post in page.posts %}
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <article class="post">
-                    <a href="{{ site.baseurl }}/journal/detail/">
-                        <img class="img-responsive" src="http://placehold.it/703x859">
-                    </a>
-                    <span class="date">01 _ 02 _ 15</span>
-                    <h1>The Greatest Beer Week In History</h1>
-                    <p>Have you ever had 24 5-star rated craft beers in less than three days? We have. Check out our visual/verbal diary of 3 hazy spring days.</p>
-                    <a href="{{ site.baseurl }}/journal/detail/" class="btn btn-link btn-block">Read More</a>
-                </article>
-            </div>
-            {% endfor %}
+            <?php while ( have_posts() ) : the_post(); ?>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <article class="post">
+                        <a href="<?php the_permalink(); ?>">
+                            <img class="img-responsive" src="<?php the_post_thumbnail_url(); ?>">
+                        </a>
+                        <span class="date"><?php the_time('m _ d _ y'); ?></span>
+                        <h1><?php the_title(); ?></h1>
+                        <?php the_excerpt(); ?>
+                        <a href="<?php the_permalink(); ?>" class="btn btn-link btn-block">Read More</a>
+                    </article>
+                </div>
+            <?php endwhile; ?>
         </div>
     </div>
 </section>
-<?php get_footer();
+<?php endif;
+get_footer();
+
