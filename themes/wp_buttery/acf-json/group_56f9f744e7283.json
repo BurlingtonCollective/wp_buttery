@@ -25,8 +25,8 @@
         },
         {
             "key": "field_56f9f798ff6e6",
-            "label": "Exerpt",
-            "name": "exerpt",
+            "label": "Excerpt",
+            "name": "excerpt",
             "type": "textarea",
             "instructions": "Teaser copy shown on pages that list out journal entries",
             "required": 1,
@@ -179,5 +179,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1459226987
+    "modified": 1460426659
 }
