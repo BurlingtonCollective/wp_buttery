@@ -7,9 +7,9 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <div class="col-xs-12">
                     <nav class="navbar">
                         <ul class="nav navbar-nav">
-                            <li><a href="<?php echo get_permalink(get_option('page_for_posts')); ?>"><i class="glyphicon glyphicon-th"></i></a></li>
-                            <li><a href="<?php echo get_permalink(get_next_post()->ID); ?>"><i class="glyphicon glyphicon-arrow-left"></i></a></li>
-                            <li><a href="<?php echo get_permalink(get_previous_post()->ID); ?>"><i class="glyphicon glyphicon-arrow-right"></i></a></li>
+                            <li><a href="<?php the_permalink(get_option('page_for_posts')); ?>"><i class="glyphicon glyphicon-th"></i></a></li>
+                            <li><a href="<?php the_permalink(get_next_post()->ID); ?>"><i class="glyphicon glyphicon-arrow-left"></i></a></li>
+                            <li><a href="<?php the_permalink(get_previous_post()->ID); ?>"><i class="glyphicon glyphicon-arrow-right"></i></a></li>
                         </ul>
                     </nav>
                 </div>

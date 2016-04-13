@@ -28,7 +28,7 @@ function create_project_post_type() {
         'capability_type' => 'post',
         'hierarchical' => true,
         'rewrite' => true,
-        'taxonomies' => array('project_types'),
+        'taxonomies' => array('category'),
     );
 
     register_post_type('project', $args);
