@@ -14,14 +14,14 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <div id="staff" class="row">
                 <?php
                 $profiles = get_posts(array('post_type' => 'profile'));
-                foreach ($profiles as $post) : setup_postdata($post); ?>
+                if ($profiles) : foreach ($profiles as $post) : setup_postdata($post); ?>
                     <div class="col-xs-12">
                         <h1><?php the_title(); ?></h1>
                         <h2><?php the_field('job_title'); ?></h2>
                         <?php the_content(); ?>
                     </div>
-                <?php wp_reset_postdata();
-                endforeach; ?>
+                    <?php wp_reset_postdata();
+                endforeach; endif; ?>
             </div>
             <?php if (have_rows('client_logos')) : ?>
                 <div id="clients" class="row">
@@ -34,7 +34,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                         <div class="col-xs-6 col-sm-4">
                             <img class="img-responsive" src="<?php echo $image['url']; ?>">
                         </div>
-                    <?php endwhile; ?>
+                        <?php
+                    endwhile; ?>
                 </div>
             <?php endif; ?>
             <div id="client-history" class="row">
@@ -66,7 +67,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                         <?php
                         while (have_rows('honors')) : the_row(); ?>
                             <li><?php the_sub_field('title'); ?></li>
-                        <?php endwhile; ?>
+                            <?php
+                        endwhile; ?>
                     </ul>
                 </div>
             <?php endif; ?>
