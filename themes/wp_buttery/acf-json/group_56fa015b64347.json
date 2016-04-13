@@ -3,6 +3,22 @@
     "title": "Project Fields",
     "fields": [
         {
+            "key": "field_56fa0257dcd9f",
+            "label": "Featured (display 2x wide)",
+            "name": "featured",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<span style=\"color:red;\">FEATURED<\/span>",
+            "default_value": 0
+        },
+        {
             "key": "field_56fa063ccaeeb",
             "label": "Subheading",
             "name": "subheading",
@@ -43,22 +59,6 @@
             "new_lines": "wpautop",
             "readonly": 0,
             "disabled": 0
-        },
-        {
-            "key": "field_56fa0257dcd9f",
-            "label": "Feature this project?",
-            "name": "featured",
-            "type": "true_false",
-            "instructions": "When a project is featured, it is added to the homepage.  The homepage lists featured projects by created date.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "<span style=\"color:red;\">FEATURED<\/span>",
-            "default_value": 0
         },
         {
             "key": "field_56fa0424501c4",
@@ -255,5 +255,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1459226970
+    "modified": 1460523483
 }
